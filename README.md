@@ -5,7 +5,7 @@
 # (2.1) Browser View:
    <img src="webpage.png"/> 
 
-### (2.2) Technology and Languages:
+### (2.2) Use of Technology and Language:
 
       * MVC framework (Laravel)
       * PHP
