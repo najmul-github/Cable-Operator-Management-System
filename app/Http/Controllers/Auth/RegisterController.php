@@ -53,7 +53,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'string', 'min:3', 'confirmed'],
         ]);
     }
 
@@ -71,10 +71,10 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
         $admin = User::where('admin', 1)->first();
-        if ($admin) {
-            $admin->notify(new NewUser($user));
-        }
+        // if ($admin) {
+        //     $admin->notify(new NewUser($user));
+        // }
     
-        return $user;
+        // return $user;
     }
 }
